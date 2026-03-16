@@ -1,0 +1,1 @@
+Studying syntax php. My first step: learning about and working with variables, also creating commit.
