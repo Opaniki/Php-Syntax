@@ -25,5 +25,15 @@ echo $name;
 */
 
 echo "My name is: $name" . "s" . "<br>";
-echo "My name is: {$name}s";
-echo "My \"name\" is: {$name}s"; // \-екранизация
+echo "My name is: {$name}s" . "<br>"; // указываем php с помощью {} где переменная, работает только в двойных ""
+echo "My \"name\" is: {$name}s <br>"; // \-екранизация позволяет использовать ковычки внутри ковычек 
+
+//Константа - позволяет сохранять параметр переменной(не изменяя его) например $NAME = "Windy"; $NAME = "Alex" (конечный результат был бы Alex)
+    
+define("NAME", "Windy");
+define("NAME2", "Windy");
+define("NAME_SURNAME", "Windy");
+define("echo", "Kostya");
+echo constant("echo"); // если хотим использовать в наименовании константы зарезервированое слово, то для вывода нужо использовать constant("наименование")
+// define("__NAME__", "Windy"); нерекомендуется 
+// define("2NAME", "Windy"); Неправильное наименование, цыфровое значение не может быть первым.
